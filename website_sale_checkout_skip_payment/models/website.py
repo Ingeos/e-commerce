@@ -17,9 +17,6 @@ class Website(models.Model):
 
     def _compute_checkout_skip_payment(self):
         for rec in self:
-            if request.session.uid:
-                rec.checkout_skip_payment = (
-                    request.env.user.partner_id.skip_website_checkout_payment
-                )
-            else:
-                rec.checkout_skip_payment = False
+            rec.checkout_skip_payment = (
+                request.env.user.partner_id.skip_website_checkout_payment
+            )

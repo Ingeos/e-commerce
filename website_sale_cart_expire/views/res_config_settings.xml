@@ -42,7 +42,7 @@
                                         name="cart_expire_delay"
                                         widget="float_time"
                                     />
-                                    hours.
+                                    <span>hours</span>
                                 </div>
                             </div>
                         </div>

@@ -1,9 +1,8 @@
 
-[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/e-commerce&target_branch=15.0)
-[![Pre-commit Status](https://github.com/OCA/e-commerce/actions/workflows/pre-commit.yml/badge.svg?branch=15.0)](https://github.com/OCA/e-commerce/actions/workflows/pre-commit.yml?query=branch%3A15.0)
-[![Build Status](https://github.com/OCA/e-commerce/actions/workflows/test.yml/badge.svg?branch=15.0)](https://github.com/OCA/e-commerce/actions/workflows/test.yml?query=branch%3A15.0)
-[![codecov](https://codecov.io/gh/OCA/e-commerce/branch/15.0/graph/badge.svg)](https://codecov.io/gh/OCA/e-commerce)
-[![Translation Status](https://translation.odoo-community.org/widgets/e-commerce-15-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/e-commerce-15-0/?utm_source=widget)
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/e-commerce&target_branch=14.0)
+[![Build Status](https://travis-ci.com/OCA/e-commerce.svg?branch=14.0)](https://travis-ci.com/OCA/e-commerce)
+[![codecov](https://codecov.io/gh/OCA/e-commerce/branch/14.0/graph/badge.svg)](https://codecov.io/gh/OCA/e-commerce)
+[![Translation Status](https://translation.odoo-community.org/widgets/e-commerce-14-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/e-commerce-14-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
 
@@ -21,30 +20,27 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[website_sale_b2x_alt_price](website_sale_b2x_alt_price/) | 15.0.1.0.0 | [![Yajo](https://github.com/Yajo.png?size=30px)](https://github.com/Yajo) | Display prices with(out) taxes in eCommerce, complementing normal mode
-[website_sale_cart_expire](website_sale_cart_expire/) | 15.0.1.1.0 | [![ivantodorovich](https://github.com/ivantodorovich.png?size=30px)](https://github.com/ivantodorovich) | Cancel carts without activity after a configurable time
-[website_sale_checkout_country_vat](website_sale_checkout_country_vat/) | 15.0.1.0.0 |  | Autocomplete VAT in checkout process
-[website_sale_checkout_skip_payment](website_sale_checkout_skip_payment/) | 15.0.1.0.0 |  | Skip payment for logged users in checkout process
-[website_sale_comparison_hide_price](website_sale_comparison_hide_price/) | 15.0.1.0.0 |  | Hide product prices on the shop
-[website_sale_hide_empty_category](website_sale_hide_empty_category/) | 15.0.1.0.0 |  | Hide any Product Categories that are empty
-[website_sale_hide_price](website_sale_hide_price/) | 15.0.1.0.0 |  | Hide product prices on the shop
-[website_sale_invoice_address](website_sale_invoice_address/) | 15.0.1.0.0 |  | Set e-Commerce sale orders invoice address as in backend
-[website_sale_order_type](website_sale_order_type/) | 15.0.1.0.0 | [![stefan-tecnativa](https://github.com/stefan-tecnativa.png?size=30px)](https://github.com/stefan-tecnativa) [![pilarvargas-tecnativa](https://github.com/pilarvargas-tecnativa.png?size=30px)](https://github.com/pilarvargas-tecnativa) | This module allows sale_order_type to work with website_sale.
-[website_sale_product_attachment](website_sale_product_attachment/) | 15.0.1.0.0 | [![Yajo](https://github.com/Yajo.png?size=30px)](https://github.com/Yajo) | Let visitors download attachments from a product page
-[website_sale_product_attribute_filter_category](website_sale_product_attribute_filter_category/) | 15.0.1.0.0 |  | Allow group attributes in shop by categories
-[website_sale_product_brand](website_sale_product_brand/) | 15.0.1.0.0 |  | Product Brand Filtering in Website
-[website_sale_product_description](website_sale_product_description/) | 15.0.1.0.0 |  | Shows custom e-Commerce description for products
-[website_sale_product_detail_attribute_image](website_sale_product_detail_attribute_image/) | 15.0.1.0.0 |  | Display attributes images in shop product detail
-[website_sale_product_detail_attribute_value_image](website_sale_product_detail_attribute_value_image/) | 15.0.1.0.0 |  | Display attributes values images in shop product detail
-[website_sale_product_item_cart_custom_qty](website_sale_product_item_cart_custom_qty/) | 15.0.1.0.0 | [![CarlosRoca13](https://github.com/CarlosRoca13.png?size=30px)](https://github.com/CarlosRoca13) | Allows to add to cart from product items a custom quantity.
-[website_sale_product_reference_displayed](website_sale_product_reference_displayed/) | 15.0.1.0.0 |  | Display product reference in e-commerce
-[website_sale_product_sort](website_sale_product_sort/) | 15.0.1.0.0 |  | Allow to define default sort criteria for e-commerce
-[website_sale_require_login](website_sale_require_login/) | 15.0.1.0.1 |  | Force users to login for buying
-[website_sale_secondary_unit](website_sale_secondary_unit/) | 15.0.1.0.0 |  | Allow manage secondary units in website shop
-[website_sale_suggest_create_account](website_sale_suggest_create_account/) | 15.0.1.0.1 |  | Suggest users to create an account when buying in the website
-[website_sale_tax_toggle](website_sale_tax_toggle/) | 15.0.1.0.0 |  | Allow display price in Shop with or without taxes
-[website_sale_vat_required](website_sale_vat_required/) | 15.0.1.0.0 |  | VAT number required in checkout form
-[website_sale_wishlist_keep](website_sale_wishlist_keep/) | 15.0.1.0.0 |  | Allows to add products to my cart but keep it in my wishlist"
+[product_template_multi_link](product_template_multi_link/) | 14.0.1.2.0 |  | Product Multi Links (Template)
+[product_template_multi_link_date_span](product_template_multi_link_date_span/) | 14.0.1.1.0 |  | Add an optional date span for when a link is active.
+[product_variant_multi_link](product_variant_multi_link/) | 14.0.1.1.0 |  | Product Multi Links (Variant)
+[website_sale_attribute_filter_form_submit](website_sale_attribute_filter_form_submit/) | 14.0.1.0.0 |  | Allow to apply manually the filters on the e-commerce
+[website_sale_attribute_filter_price](website_sale_attribute_filter_price/) | 14.0.1.0.0 | [![Tardo](https://github.com/Tardo.png?size=30px)](https://github.com/Tardo) | A price filter for website sale
+[website_sale_cart_expire](website_sale_cart_expire/) | 14.0.1.0.0 | [![ivantodorovich](https://github.com/ivantodorovich.png?size=30px)](https://github.com/ivantodorovich) | Expire abandoned carts
+[website_sale_category_breadcrumb](website_sale_category_breadcrumb/) | 14.0.1.0.0 | [![Rad0van](https://github.com/Rad0van.png?size=30px)](https://github.com/Rad0van) | Displays Product Category Breadcrumb(s) in eCommerce
+[website_sale_checkout_country_vat](website_sale_checkout_country_vat/) | 14.0.1.0.0 |  | Autocomplete VAT in checkout process
+[website_sale_checkout_skip_payment](website_sale_checkout_skip_payment/) | 14.0.1.1.0 |  | Skip payment for logged users in checkout process
+[website_sale_delivery_group](website_sale_delivery_group/) | 14.0.1.0.0 | [![ivantodorovich](https://github.com/ivantodorovich.png?size=30px)](https://github.com/ivantodorovich) | Provides a way to group shipping methods
+[website_sale_hide_price](website_sale_hide_price/) | 14.0.1.0.0 |  | Hide product prices on the shop
+[website_sale_order_type](website_sale_order_type/) | 14.0.1.0.0 | [![joao-p-marques](https://github.com/joao-p-marques.png?size=30px)](https://github.com/joao-p-marques) | This module allows sale_order_type to work with website_sale.
+[website_sale_product_attribute_filter_category](website_sale_product_attribute_filter_category/) | 14.0.1.0.0 | [![ivantodorovich](https://github.com/ivantodorovich.png?size=30px)](https://github.com/ivantodorovich) | Allow group attributes in shop by categories
+[website_sale_product_attribute_filter_visibility](website_sale_product_attribute_filter_visibility/) | 14.0.1.0.0 |  | Allow hide any attributes in shop attributes filter
+[website_sale_product_brand](website_sale_product_brand/) | 14.0.1.0.0 |  | Product Brand Filtering in Website
+[website_sale_product_description](website_sale_product_description/) | 14.0.1.0.0 |  | Shows custom e-Commerce description for products
+[website_sale_product_detail_attribute_image](website_sale_product_detail_attribute_image/) | 14.0.1.0.0 |  | Display attributes images in shop product detail
+[website_sale_product_detail_attribute_value_image](website_sale_product_detail_attribute_value_image/) | 14.0.1.0.0 |  | Display attributes values images in shop product detail
+[website_sale_product_minimal_price](website_sale_product_minimal_price/) | 14.0.1.0.0 | [![sergio-teruel](https://github.com/sergio-teruel.png?size=30px)](https://github.com/sergio-teruel) | Display minimal price for products that has variants
+[website_sale_show_company_data](website_sale_show_company_data/) | 14.0.1.0.0 |  | Show commercial partner data if any
+[website_sale_stock_available](website_sale_stock_available/) | 14.0.1.0.0 |  | Display 'Available to promise' in shop online instead 'Quantity On Hand'
 
 [//]: # (end addons)
 

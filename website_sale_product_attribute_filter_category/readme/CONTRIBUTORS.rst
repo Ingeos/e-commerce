@@ -2,4 +2,5 @@
 
     * Sergio Teruel
     * Carlos Roca
-    * Pilar Vargas
+
+* Iván Todorovich <ivan.todorovich@gmail.com>

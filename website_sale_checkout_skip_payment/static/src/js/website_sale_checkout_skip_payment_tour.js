@@ -12,11 +12,7 @@ odoo.define("website_sale_checkout_skip_payment.tour", function (require) {
             trigger: "a:contains('Customizable Desk')",
         },
         {
-            trigger: "a#add_to_cart",
-        },
-        {
-            trigger: "a[href='/shop/cart']",
-            extra_trigger: "sup.my_cart_quantity:contains('1')",
+            trigger: "a:contains('Add to Cart')",
         },
         {
             trigger: ".btn-primary:contains('Confirm')",
@@ -27,7 +23,7 @@ odoo.define("website_sale_checkout_skip_payment.tour", function (require) {
         },
         {
             trigger: "a[href='/shop']",
-            extra_trigger: "strong:contains('Payment Information:')",
+            extra_trigger: "h2:contains('Thank you for your order')",
         },
     ];
     tour.register(

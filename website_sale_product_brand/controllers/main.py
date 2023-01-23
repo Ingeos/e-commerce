@@ -3,44 +3,19 @@
 
 from odoo import http
 from odoo.http import request
-from odoo.osv import expression
 
 from odoo.addons.website_sale.controllers.main import QueryURL, WebsiteSale
 
 
 class WebsiteSale(WebsiteSale):
-    def _get_search_options(
-        self,
-        category=None,
-        attrib_values=None,
-        pricelist=None,
-        min_price=0.0,
-        max_price=0.0,
-        conversion_rate=1,
-        **post
-    ):
-        res = super()._get_search_options(
-            category=category,
-            attrib_values=attrib_values,
-            pricelist=pricelist,
-            min_price=min_price,
-            max_price=max_price,
-            conversion_rate=conversion_rate,
-            **post
-        )
-        res["brand"] = request.context.get("brand_id")
-        return res
-
     def _get_search_domain(
         self, search, category, attrib_values, search_in_description=True
     ):
         domain = super()._get_search_domain(
             search, category, attrib_values, search_in_description=search_in_description
         )
-        if "brand_id" in request.context:
-            domain = expression.AND(
-                [domain, [("product_brand_id", "=", request.context["brand_id"])]]
-            )
+        if "brand_id" in request.env.context:
+            domain.append(("product_brand_id", "=", request.env.context["brand_id"]))
         return domain
 
     @http.route(
@@ -56,37 +31,20 @@ class WebsiteSale(WebsiteSale):
         auth="public",
         website=True,
     )
-    def shop(
-        self,
-        page=0,
-        category=None,
-        search="",
-        min_price=0.0,
-        max_price=0.0,
-        ppg=False,
-        brand=None,
-        **post
-    ):
+    def shop(self, page=0, category=None, brand=None, search="", **post):
         if brand:
-            context = dict(request.context)
+            context = dict(request.env.context)
             context.setdefault("brand_id", int(brand))
-            request.context = context
+            request.env.context = context
         return super().shop(
-            page=page,
-            category=category,
-            search=search,
-            min_price=min_price,
-            max_price=max_price,
-            ppg=ppg,
-            brand=brand,
-            **post
+            page=page, category=category, brand=brand, search=search, **post
         )
 
     # Method to get the brands.
     @http.route(["/page/product_brands"], type="http", auth="public", website=True)
     def product_brands(self, **post):
         b_obj = request.env["product.brand"]
-        domain = [("website_published", "=", True)]
+        domain = []
         if post.get("search"):
             domain += [("name", "ilike", post.get("search"))]
         brand_rec = b_obj.sudo().search(domain)
